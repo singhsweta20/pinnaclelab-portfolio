@@ -1,32 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>My Portfolio</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  body { background:#f4f7f9; color:#222; }
+  header {
+    background: linear-gradient(135deg, #1e5631, #2e7d32);
+    color:#fff; text-align:center; padding:60px 20px;
+  }
+  header h1 { font-size:2.2em; margin-bottom:10px; }
+  header p { font-size:1.1em; opacity:0.9; }
+
+  section {
+    max-width:700px; margin:40px auto; background:#eaf1f7;
+    padding:30px; border-radius:10px; text-align:center;
+  }
+  section h2 { margin-bottom:15px; color:#1e5631; }
+
+  .skills { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+  .skills span {
+    background:#d6e4f0; padding:8px 16px; border-radius:6px; font-weight:bold;
+  }
+
+  .projects { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+  .project-card {
+    background:#fff; width:250px; padding:20px; border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:left;
+  }
+  .project-card h3 { color:#1e5631; margin-bottom:8px; }
+  .project-card a { color:#2e7d32; text-decoration:none; font-weight:bold; }
+
+  .contact a {
+    display:inline-block; margin:8px 12px; color:#1e5631; font-weight:bold; text-decoration:none;
+  }
+
+  footer { text-align:center; padding:20px; color:#666; font-size:0.9em; }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Hello, I'm Swetasingh</h1>
-        <p>Web Developer & Learner</p>
-    </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Welcome to my personal portfolio website!</p>
-    </section>
+<header>
+  <h1>Hello, I'm Swetasingh</h1>
+  <p>Web Developer & Learner</p>
+</header>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
+<section>
+  <h2>About Me</h2>
+  <p>Welcome to my personal portfolio website!</p>
+</section>
 
-    <script src="script.js"></script>
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Git & GitHub</span>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Project One</h3>
+      <p>A short description of what this project does and what you learned.</p>
+      <a href="#">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Project Two</h3>
+      <p>Another project description goes here.</p>
+      <a href="#">View Project</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact Me</h2>
+  <a href="mailto:youremail@example.com">Email</a>
+  <a href="https://github.com/singhsweta20" target="_blank">GitHub</a>
+  <a href="#" target="_blank">LinkedIn</a>
+</section>
+
+<footer>
+  &copy; 2026 Swetasingh. All rights reserved.
+</footer>
+
 </body>
 </html>
