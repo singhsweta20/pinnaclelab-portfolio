@@ -1,92 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>My Portfolio</title>
-<style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
-  body { background:#f4f7f9; color:#222; }
-  header {
-    background: linear-gradient(135deg, #1e5631, #2e7d32);
-    color:#fff; text-align:center; padding:60px 20px;
-  }
-  header h1 { font-size:2.2em; margin-bottom:10px; }
-  header p { font-size:1.1em; opacity:0.9; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow Pro — Task Manager</title>
 
-  section {
-    max-width:700px; margin:40px auto; background:#eaf1f7;
-    padding:30px; border-radius:10px; text-align:center;
-  }
-  section h2 { margin-bottom:15px; color:#1e5631; }
+  <!-- External Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  .skills { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
-  .skills span {
-    background:#d6e4f0; padding:8px 16px; border-radius:6px; font-weight:bold;
-  }
-
-  .projects { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-  .project-card {
-    background:#fff; width:250px; padding:20px; border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:left;
-  }
-  .project-card h3 { color:#1e5631; margin-bottom:8px; }
-  .project-card a { color:#2e7d32; text-decoration:none; font-weight:bold; }
-
-  .contact a {
-    display:inline-block; margin:8px 12px; color:#1e5631; font-weight:bold; text-decoration:none;
-  }
-
-  footer { text-align:center; padding:20px; color:#666; font-size:0.9em; }
-</style>
+  <!-- Link External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-theme="dark">
 
-<header>
-  <h1>Hello, I'm Swetasingh</h1>
-  <p>Web Developer & Learner</p>
-</header>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-icon"><i class="fa-solid fa-list-check"></i></div>
+        <h2>TaskFlow Pro</h2>
+      </div>
+      <button id="themeToggleBtn" class="icon-btn" title="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>Welcome to my personal portfolio website!</p>
-</section>
-
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>Git & GitHub</span>
-  </div>
-</section>
-
-<section>
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project-card">
-       <h3>Personal Portfolio Website</h3>
-<p>A responsive personal portfolio website built using HTML, CSS, and JavaScript. It showcases my skills, projects, and contact information in a clean, simple design.</p>
-<a href="https://singhsweta20.github.io/pinnaclelab-portfolio/" target="_blank">View Project</a>
+    <!-- Progress Card -->
+    <div class="card progress-card">
+      <div class="progress-info">
+        <span>Completion Progress</span>
+        <span id="progressPercent">0% Completed</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
     </div>
-    <div class="project-card">
-      <h3>To-Do List App</h3>
-<p>A simple to-do list web application built with HTML, CSS, and JavaScript. Users can add and delete tasks dynamically, showcasing DOM manipulation and event handling skills.</p>
-<a href="https://singhsweta20.github.io/todo-list/" target="_blank">View Project</a>
+
+    <!-- Task Input Form -->
+    <div class="card form-card">
+      <div class="input-row">
+        <input type="text" id="taskInput" placeholder="Add a new task..." autocomplete="off">
+        <button id="addBtn" class="btn-primary">
+          <i class="fa-solid fa-plus"></i> Add
+        </button>
+      </div>
+      <div class="options-row">
+        <select id="categorySelect" class="select-input">
+          <option value="Work">💼 Work</option>
+          <option value="Personal">👤 Personal</option>
+          <option value="Urgent">🔥 Urgent</option>
+        </select>
+        <select id="prioritySelect" class="select-input">
+          <option value="low">🟢 Low Priority</option>
+          <option value="medium" selected>🟡 Medium Priority</option>
+          <option value="high">🔴 High Priority</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Search & Filters Toolbar -->
+    <div class="toolbar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search tasks...">
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Done</button>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList" class="task-list"></ul>
+
+    <!-- Empty State Message -->
+    <div id="emptyState" class="empty-state">
+      <i class="fa-solid fa-clipboard-check"></i>
+      <p>No tasks found. Add a task to get started!</p>
     </div>
   </div>
-</section>
 
-<section class="contact">
-  <h2>Contact Me</h2>
-  <a href="mailto:singhsweta1024@gmail.com">Email</a>
-  <a href="https://github.com/singhsweta20" target="_blank">GitHub</a>
-  <a href="https://www.linkedin.com/in/sweta-singh-193a383ab" target="_blank">LinkedIn</a>
-</section>
-
-<footer>
-  &copy; 2026 Swetasingh. All rights reserved.
-</footer>
-
+  <!-- Link External JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
