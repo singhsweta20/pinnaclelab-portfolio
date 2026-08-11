@@ -3,197 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Developer Portfolio</title>
-  
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
+  <title>Portfolio Showcase</title>
+  <style>
+    /* बेसिक स्टाइलिंग जो आपके डिजाइन से मैच करती है */
+    body {
+      background-color: #0b131e;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .projects-container {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .project-card {
+      background: #0f1c2e;
+      border: 1px solid #1e2d42;
+      border-radius: 16px;
+      width: 320px;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #2dd4bf;
+    }
+
+    .card-image-area {
+      background: linear-gradient(135deg, #0d3b4c, #115e59);
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-image-area svg {
+      width: 48px;
+      height: 48px;
+      color: #2dd4bf;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      background-color: rgba(45, 212, 191, 0.15);
+      color: #2dd4bf;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      color: #ffffff;
+    }
+
+    .project-description {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin: 0 0 16px 0;
+    }
+
+    .source-code-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .source-code-btn:hover {
+      color: #2dd4bf;
+    }
+
+    .source-code-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Animated Glowing Backgrounds -->
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
+  <h1>Portfolio Showcase</h1>
 
-  <!-- Navigation Bar -->
-  <header>
-    <a href="#" class="logo">
-      <i class="fa-solid fa-code"></i> Developer<span>.io</span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="#about" class="active">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="header-actions">
-      <button class="theme-toggle-btn" id="themeToggle" title="Toggle Theme">
-        <i class="fa-solid fa-moon"></i>
-      </button>
-    </div>
-  </header>
+  <div class="projects-container">
 
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="hero-wrapper">
-      <div class="hero-text">
-        <div class="badge">
-          <span class="badge-dot"></span> Available for Hiring & Projects
+    <!-- Card 1: Personal Portfolio -->
+    <div class="project-card">
+      <div class="card-image-area">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+          <polyline points="10 9 8 11 10 13"></polyline>
+          <polyline points="14 9 16 11 14 13"></polyline>
+        </svg>
+      </div>
+      <div class="card-content">
+        <div class="tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
         </div>
-        <h1>Crafting <span class="gradient-text">Modern Web</span> Experiences</h1>
-        <div class="typewriter-text">&gt; Full-Stack Web Developer & Creative Coder_</div>
-        <p>I build scalable, highly performant, and visual-rich web applications with HTML5, CSS3, JavaScript, and modern frameworks.</p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-primary">
-            Connect With Me <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#projects" class="btn-secondary">View Projects</a>
+        <h3 class="project-title">Personal Portfolio Website</h3>
+        <p class="project-description">
+          High-end portfolio featuring glassmorphism, dynamic theme switching, and direct messaging links.
+        </p>
+        <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="source-code-btn">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Source Code
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 2: Sundial Bakehouse (Updated Bakery Project) -->
+    <div class="project-card">
+      <div class="card-image-area">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+      </div>
+      <div class="card-content">
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">CSS Grid</span>
         </div>
-      </div>
-
-      <!-- Live Code Visual Block -->
-      <div class="hero-code-box">
-        <div class="code-header">
-          <span class="dot dot-red"></span>
-          <span class="dot dot-yellow"></span>
-          <span class="dot dot-green"></span>
-          <span class="code-title">developer.js</span>
-        </div>
-        <div class="code-body">
-          <span class="keyword">const</span> <span class="property">developer</span> = {<br>
-          &nbsp;&nbsp;<span class="property">name</span>: <span class="string">'Your Name'</span>,<br>
-          &nbsp;&nbsp;<span class="property">skills</span>: [<span class="string">'HTML5'</span>, <span class="string">'CSS3'</span>, <span class="string">'JavaScript'</span>, <span class="string">'Git'</span>],<br>
-          &nbsp;&nbsp;<span class="property">status</span>: <span class="string">'Production Ready'</span><br>
-          };<br><br>
-          <span class="function">console</span>.log(<span class="string">'Welcome to my portfolio!'</span>);
-        </div>
+        <h3 class="project-title">Sundial Bakehouse Website</h3>
+        <p class="project-description">
+          Interactive bakery layout featuring dynamic navigation, tab switches, metadata, and JSON-LD structured data.
+        </p>
+        <!-- आपका बेकरी प्रोजेक्ट लिंक -->
+        <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="source-code-btn">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Live Demo / Source
+        </a>
       </div>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="section-header">
-      <span class="section-subtitle">Capabilities</span>
-      <h2>Technical Expertise</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <i class="fa-brands fa-html5 skill-icon"></i>
-        <h3>HTML5 & Semantics</h3>
-        <p>Clean, structured, and accessible markup optimized for SEO & performance.</p>
-        <div class="skill-progress"><div class="skill-bar" style="width: 95%;"></div></div>
-      </div>
+  </div>
 
-      <div class="skill-card">
-        <i class="fa-brands fa-css3-alt skill-icon"></i>
-        <h3>CSS3 & Animations</h3>
-        <p>Flexbox, Grid, Glassmorphism, Responsive Design, and UI transitions.</p>
-        <div class="skill-progress"><div class="skill-bar" style="width: 90%;"></div></div>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-brands fa-js skill-icon"></i>
-        <h3>Modern JavaScript</h3>
-        <p>ES6+, Async/Await, DOM manipulation, APIs, and interactive logic.</p>
-        <div class="skill-progress"><div class="skill-bar" style="width: 85%;"></div></div>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-brands fa-github skill-icon"></i>
-        <h3>Git & GitHub</h3>
-        <p>Version control, branches, repositories, deployment, and hosting.</p>
-        <div class="skill-progress"><div class="skill-bar" style="width: 88%;"></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="section-header">
-      <span class="section-subtitle">Featured Work</span>
-      <h2>Portfolio Showcase</h2>
-    </div>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-banner"><i class="fa-solid fa-laptop-code"></i></div>
-        <div class="project-content">
-          <div class="project-tags">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <h3>Personal Portfolio Website</h3>
-          <p>High-end portfolio featuring glassmorphism, dynamic theme switching, and direct messaging links.</p>
-          <a href="https://github.com/your-username" target="_blank" class="btn-link">
-            <i class="fa-brands fa-github"></i> Source Code
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-banner"><i class="fa-solid fa-bag-shopping"></i></div>
-        <div class="project-content">
-          <div class="project-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">CSS Grid</span>
-          </div>
-          <h3>E-Commerce Web Application</h3>
-          <p>Interactive shopping system with dynamic cart calculation and responsive design layout.</p>
-          <a href="https://github.com/your-username" target="_blank" class="btn-link">
-            <i class="fa-brands fa-github"></i> Source Code
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section (ACTIVE LINKS) -->
-  <section id="contact">
-    <div class="section-header">
-      <span class="section-subtitle">Get In Touch</span>
-      <h2>Let's Work Together</h2>
-    </div>
-    <div class="contact-container">
-      
-      <!-- WhatsApp Active Link -->
-      <a href="https://wa.me/919876543210?text=Hello!%20I%20saw%20your%20portfolio%20and%20want%20to%20connect." target="_blank" class="contact-card whatsapp">
-        <i class="fa-brands fa-whatsapp"></i>
-        <h3>WhatsApp</h3>
-        <p>Instant Direct Chat</p>
-        <span class="action-badge">Send Message <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-
-      <!-- GitHub Active Link -->
-      <a href="https://github.com/your-username" target="_blank" class="contact-card github">
-        <i class="fa-brands fa-github"></i>
-        <h3>GitHub</h3>
-        <p>Explore Repositories</p>
-        <span class="action-badge">View Profile <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-
-      <!-- Gmail Active Link -->
-      <a href="mailto:yourname@gmail.com?subject=Portfolio%20Inquiry" class="contact-card gmail">
-        <i class="fa-solid fa-envelope"></i>
-        <h3>Gmail</h3>
-        <p>Official Email Contact</p>
-        <span class="action-badge">Compose Email <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Developer Portfolio. Crafted with <span>&hearts;</span> using HTML, CSS & JS.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
