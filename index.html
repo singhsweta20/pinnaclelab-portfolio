@@ -3,371 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer Portfolio</title>
-  <style>
-    /* Global Styles & CSS Variables */
-    :root {
-      --bg-color: #0b131e;
-      --card-bg: #0f1c2e;
-      --card-border: #1e2d42;
-      --primary-teal: #2dd4bf;
-      --text-main: #ffffff;
-      --text-muted: #94a3b8;
-      --nav-bg: rgba(11, 19, 30, 0.85);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-    }
-
-    /* Navbar */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: var(--nav-bg);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--card-border);
-      z-index: 1000;
-    }
-
-    nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 24px;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
-    .logo span {
-      color: var(--primary-teal);
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary-teal);
-    }
-
-    .theme-icon {
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    /* Layout Sections */
-    section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 100px 24px 40px 24px;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 24px;
-      position: relative;
-    }
-
-    /* Hero / About Section */
-    .about-content {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 32px;
-      color: var(--text-muted);
-    }
-
-    .about-content h2 {
-      color: var(--text-main);
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-
-    /* Skills Section */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 16px;
-    }
-
-    .skill-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      padding: 16px;
-      border-radius: 12px;
-      text-align: center;
-      font-weight: 600;
-      color: var(--primary-teal);
-    }
-
-    /* Projects Section */
-    .projects-container {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      width: 340px;
-      overflow: hidden;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--primary-teal);
-    }
-
-    .card-image-area {
-      background: linear-gradient(135deg, #0d3b4c, #115e59);
-      height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card-image-area svg {
-      width: 48px;
-      height: 48px;
-      color: var(--primary-teal);
-    }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .tags {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 12px;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      background-color: rgba(45, 212, 191, 0.15);
-      color: var(--primary-teal);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .project-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--text-main);
-    }
-
-    .project-description {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-
-    .source-code-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-
-    .source-code-btn:hover {
-      color: var(--primary-teal);
-    }
-
-    .source-code-btn svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-    }
-
-    /* Contact Section */
-    .contact-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 32px;
-      text-align: center;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 10px 24px;
-      background: var(--primary-teal);
-      color: #0b131e;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 8px;
-      transition: opacity 0.2s;
-    }
-
-    .contact-btn:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: var(--text-muted);
-      font-size: 14px;
-      border-top: 1px solid var(--card-border);
-    }
-  </style>
+  <title>Professional Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- FontAwesome Icons for GitHub, Theme & Nav -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- Header / Navigation -->
+  <!-- Navbar -->
   <header>
-    <nav>
-      <div class="logo">developer<span>.io</span></div>
+    <nav class="navbar">
+      <div class="logo">developer <span>.io</span></div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li class="theme-icon">🌙</li>
       </ul>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </nav>
   </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <h2>Hello, I'm a Web Developer</h2>
-      <p>
-        I specialize in building high-performance, responsive web applications using modern front-end technologies like HTML5, CSS3, JavaScript, and CSS Grid. I love creating clean designs and dynamic user experiences.
-      </p>
-    </div>
-  </section>
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2 class="section-title">About Me</h2>
+      <div class="glass-card about-card">
+        <h3>Hi, I'm Sweta Singh</h3>
+        <p>
+          Passionate Front-End Developer crafting modern, clean, and interactive web applications with dynamic UI layouts and responsive design standards.
+        </p>
+      </div>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">HTML5</div>
-      <div class="skill-card">CSS3</div>
-      <div class="skill-card">JavaScript</div>
-      <div class="skill-card">CSS Grid</div>
-      <div class="skill-card">Responsive Design</div>
-      <div class="skill-card">Git & GitHub</div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-badge">HTML5</div>
+        <div class="skill-badge">CSS3</div>
+        <div class="skill-badge">JavaScript</div>
+        <div class="skill-badge">CSS Grid</div>
+        <div class="skill-badge">Flexbox</div>
+        <div class="skill-badge">Git & GitHub</div>
+      </div>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2 class="section-title">Portfolio Showcase</h2>
-    <div class="projects-container">
-
-      <!-- Card 1: Personal Portfolio -->
-      <div class="project-card">
-        <div class="card-image-area">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-            <polyline points="10 9 8 11 10 13"></polyline>
-            <polyline points="14 9 16 11 14 13"></polyline>
-          </svg>
-        </div>
-        <div class="card-content">
-          <div class="tags">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h1 class="main-heading">Portfolio Showcase</h1>
+      
+      <div class="projects-grid">
+        <!-- Project 1: Personal Portfolio -->
+        <div class="project-card">
+          <div class="card-banner">
+            <i class="fa-solid fa-laptop-code card-icon"></i>
           </div>
-          <h3 class="project-title">Personal Portfolio Website</h3>
-          <p class="project-description">
-            High-end portfolio featuring glassmorphism, dynamic theme switching, and direct messaging links.
-          </p>
-          <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="source-code-btn">
-            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            Source Code
-          </a>
+          <div class="card-body">
+            <div class="tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <h3>Personal Portfolio Website</h3>
+            <p>
+              High-end portfolio featuring glassmorphism, dynamic theme switching, and direct messaging links.
+            </p>
+            <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="code-link">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Sundial Bakehouse (Replaced E-Commerce) -->
+        <div class="project-card">
+          <div class="card-banner">
+            <i class="fa-solid fa-bag-shopping card-icon"></i>
+          </div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS Grid</span>
+            </div>
+            <h3>Sundial Bakehouse Website</h3>
+            <p>
+              Interactive bakery layout featuring dynamic navigation, tab switches, metadata, and JSON-LD structured data.
+            </p>
+            <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="code-link">
+              <i class="fa-brands fa-github"></i> Live Demo / Source
+            </a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Card 2: Sundial Bakehouse -->
-      <div class="project-card">
-        <div class="card-image-area">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-        </div>
-        <div class="card-content">
-          <div class="tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">CSS Grid</span>
-          </div>
-          <h3 class="project-title">Sundial Bakehouse Website</h3>
-          <p class="project-description">
-            Interactive bakery layout featuring dynamic navigation, tab switches, metadata, and JSON-LD structured data.
-          </p>
-          <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="source-code-btn">
-            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            Live Demo / Source
-          </a>
-        </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="glass-card contact-card">
+        <p>Interested in working together or have any questions? Send me a message!</p>
+        <a href="mailto:singhsweta20@gmail.com" class="contact-btn">
+          <i class="fa-solid fa-envelope"></i> Send Email
+        </a>
       </div>
-
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-card">
-      <p>Feel free to reach out if you'd like to collaborate or have any questions!</p>
-      <a href="mailto:your-email@example.com" class="contact-btn">Send Message</a>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2026 Developer Portfolio. All rights reserved.</p>
+    <p>&copy; 2026 Sweta Singh. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
