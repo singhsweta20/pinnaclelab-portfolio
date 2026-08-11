@@ -74,3 +74,4 @@ document.addEventListener("DOMContentLoaded", () => {
     fill.style.width = targetWidth;
   });
 });
+
