@@ -4,161 +4,173 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sweta Singh | Front-End Web Developer</title>
-  
-  <!-- Modern Font & FontAwesome Icons -->
+
+  <!-- Premium Web Fonts & FontAwesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="dark-theme">
 
-  <!-- Glowing Visual Background Elements -->
-  <div class="bg-glow glow-1"></div>
-  <div class="bg-glow glow-2"></div>
+  <!-- Ambient Light Orbs -->
+  <div class="glow-orb orb-top"></div>
+  <div class="glow-orb orb-bottom"></div>
 
-  <!-- Header / Navbar -->
-  <header class="site-header">
-    <nav class="navbar">
-      <a href="#about" class="logo">
-        <i class="fa-solid fa-code"></i> Developer<span>.io</span>
+  <!-- Navbar -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="#about" class="brand-logo">
+        <i class="fa-solid fa-terminal"></i> Developer<span class="dot">.io</span>
       </a>
-      <ul class="nav-links">
+      
+      <ul class="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+
+      <button id="theme-toggle" class="theme-switch" aria-label="Toggle Theme">
         <i class="fa-solid fa-moon"></i>
       </button>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="main-wrapper">
     <!-- Hero / About Section -->
     <section id="about" class="hero-section">
-      <div class="hero-left">
-        <div class="badge">
-          <span class="pulse-dot"></span> Available for Hiring & Projects
+      <div class="hero-text-content">
+        <div class="status-pill">
+          <span class="live-pulse"></span>
+          <span>Available for Hiring & Freelance</span>
         </div>
-        <h1 class="hero-title">Crafting Modern <br><span class="accent-text">Web Experiences</span></h1>
-        <p class="hero-subtitle">&gt; Full-Stack Web Developer & Creative Coder_</p>
-        <p class="hero-desc">
-          I build scalable, highly performant, and visual-rich web applications with HTML5, CSS3, JavaScript, and modern frameworks.
+        
+        <h1 class="hero-headline">
+          Crafting Modern <br>
+          <span class="gradient-text">Web Experiences</span>
+        </h1>
+        
+        <p class="hero-subline">&gt; Full-Stack Developer & Creative Coder_</p>
+        
+        <p class="hero-description">
+          I build scalable, highly performant, and visual-rich web applications with HTML5, CSS3, JavaScript, and modern web architectures.
         </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Connect With Me <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#projects" class="btn btn-secondary">View Projects</a>
+
+        <div class="hero-btn-group">
+          <a href="#contact" class="btn btn-teal">
+            Connect With Me <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            View Projects
+          </a>
         </div>
       </div>
 
-      <!-- Live Code Window -->
-      <div class="hero-right">
-        <div class="code-window">
-          <div class="window-header">
-            <div class="dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <span class="window-title">developer.js</span>
+      <!-- IDE Code Card -->
+      <div class="ide-card">
+        <div class="ide-header">
+          <div class="ide-buttons">
+            <span class="btn-circle red"></span>
+            <span class="btn-circle yellow"></span>
+            <span class="btn-circle green"></span>
           </div>
-          <div class="window-body">
-            <pre><code><span class="kwd">const</span> <span class="var">developer</span> = {
-  <span class="prop">name</span>: <span class="str">'Sweta Singh'</span>,
-  <span class="prop">role</span>: <span class="str">'Front-End Developer'</span>,
-  <span class="prop">skills</span>: [<span class="str">'HTML5'</span>, <span class="str">'CSS3'</span>, <span class="str">'JavaScript'</span>, <span class="str">'Git'</span>],
-  <span class="prop">status</span>: <span class="str">'Production Ready'</span>
+          <span class="ide-filename"><i class="fa-brands fa-js"></i> developer.js</span>
+        </div>
+        <div class="ide-body">
+          <pre><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">'Sweta Singh'</span>,
+  <span class="c-prop">role</span>: <span class="c-str">'Front-End Developer'</span>,
+  <span class="c-prop">skills</span>: [<span class="c-str">'HTML5'</span>, <span class="c-str">'CSS3'</span>, <span class="c-str">'JS'</span>, <span class="c-str">'Git'</span>],
+  <span class="c-prop">status</span>: <span class="c-str">'Production Ready'</span>
 };
 
-<span class="console">console</span>.<span class="method">log</span>(<span class="str">'Welcome to my portfolio!'</span>);</code></pre>
-          </div>
+<span class="c-func">console</span>.<span class="c-method">log</span>(<span class="c-str">'Welcome to my portfolio!'</span>);</code></pre>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="section-header">
-        <span class="section-tag">CAPABILITIES</span>
-        <h2 class="section-title">Technical Expertise</h2>
+    <section id="skills" class="section-container">
+      <div class="section-heading">
+        <span class="sub-title">CAPABILITIES</span>
+        <h2>Technical Expertise</h2>
       </div>
 
       <div class="skills-grid">
         <div class="skill-card">
-          <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+          <div class="skill-icon-box"><i class="fa-brands fa-html5"></i></div>
           <h3>HTML5 & Semantics</h3>
           <p>Clean, structured, and accessible markup optimized for SEO & performance.</p>
-          <div class="skill-bar"><div class="fill" style="width: 92%;"></div></div>
+          <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
         </div>
 
         <div class="skill-card">
-          <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+          <div class="skill-icon-box"><i class="fa-brands fa-css3-alt"></i></div>
           <h3>CSS3 & Animations</h3>
           <p>Flexbox, CSS Grid, Glassmorphism, Responsive Design, and modern UI transitions.</p>
-          <div class="skill-bar"><div class="fill" style="width: 88%;"></div></div>
+          <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
         </div>
 
         <div class="skill-card">
-          <div class="skill-icon"><i class="fa-brands fa-square-js"></i></div>
+          <div class="skill-icon-box"><i class="fa-brands fa-square-js"></i></div>
           <h3>Modern JavaScript</h3>
           <p>ES6+, Async/Await, DOM manipulation, APIs, and interactive client logic.</p>
-          <div class="skill-bar"><div class="fill" style="width: 82%;"></div></div>
+          <div class="progress-track"><div class="progress-fill" style="width: 82%;"></div></div>
         </div>
 
         <div class="skill-card">
-          <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="skill-icon-box"><i class="fa-brands fa-github"></i></div>
           <h3>Git & GitHub</h3>
           <p>Version control, branches, project workflow, continuous deployment, and hosting.</p>
-          <div class="skill-bar"><div class="fill" style="width: 80%;"></div></div>
+          <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="section-header">
-        <span class="section-tag">FEATURED WORK</span>
-        <h2 class="section-title">Portfolio Showcase</h2>
+    <section id="projects" class="section-container">
+      <div class="section-heading">
+        <span class="sub-title">FEATURED WORK</span>
+        <h2>Portfolio Showcase</h2>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1 -->
+        <!-- Card 1 -->
         <div class="project-card">
-          <div class="card-banner">
+          <div class="card-image-banner p1-bg">
             <i class="fa-solid fa-laptop-code"></i>
           </div>
-          <div class="card-content">
-            <div class="tag-group">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
+          <div class="card-details">
+            <div class="tag-row">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
             </div>
             <h3>Personal Portfolio Website</h3>
-            <p>High-end developer portfolio featuring glassmorphism layout, dynamic theme switching, and direct messaging links.</p>
-            <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <p>High-end developer portfolio featuring glassmorphism layout, dynamic theme switching, and responsive design.</p>
+            <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="code-btn">
               <i class="fa-brands fa-github"></i> Source Code
             </a>
           </div>
         </div>
 
-        <!-- Project 2 (Sundial Bakehouse) -->
+        <!-- Card 2 -->
         <div class="project-card">
-          <div class="card-banner bakery-banner">
+          <div class="card-image-banner p2-bg">
             <i class="fa-solid fa-store"></i>
           </div>
-          <div class="card-content">
-            <div class="tag-group">
-              <span class="tag">JavaScript</span>
-              <span class="tag">CSS Grid</span>
-              <span class="tag">JSON-LD</span>
+          <div class="card-details">
+            <div class="tag-row">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">CSS Grid</span>
+              <span class="tech-tag">JSON-LD</span>
             </div>
             <h3>Sundial Bakehouse Website</h3>
             <p>Interactive bakery application featuring dynamic UI tabs, menu showcases, metadata, and structured data setup.</p>
-            <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="code-btn">
               <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo / Source
             </a>
           </div>
@@ -167,39 +179,38 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="section-header">
-        <span class="section-tag">GET IN TOUCH</span>
-        <h2 class="section-title">Let's Work Together</h2>
+    <section id="contact" class="section-container">
+      <div class="section-heading">
+        <span class="sub-title">GET IN TOUCH</span>
+        <h2>Let's Work Together</h2>
       </div>
 
       <div class="contact-grid">
-        <a href="https://wa.me/" target="_blank" class="contact-card">
-          <div class="contact-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
+        <a href="https://wa.me/" target="_blank" class="contact-box">
+          <div class="c-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
           <h3>WhatsApp</h3>
-          <p>Instant Direct Chat</p>
-          <span class="card-link">Send Message <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="c-sub">Instant Direct Chat</span>
+          <span class="c-action">Send Message <i class="fa-solid fa-arrow-right"></i></span>
         </a>
 
-        <a href="https://github.com/singhsweta20" target="_blank" class="contact-card active-card">
-          <div class="contact-icon gh"><i class="fa-brands fa-github"></i></div>
+        <a href="https://github.com/singhsweta20" target="_blank" class="contact-box highlight-box">
+          <div class="c-icon gh"><i class="fa-brands fa-github"></i></div>
           <h3>GitHub</h3>
-          <p>Explore Repositories</p>
-          <span class="card-link">View Profile <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="c-sub">Explore Repositories</span>
+          <span class="c-action">View Profile <i class="fa-solid fa-arrow-right"></i></span>
         </a>
 
-        <a href="mailto:singhsweta20@gmail.com" class="contact-card">
-          <div class="contact-icon gm"><i class="fa-solid fa-envelope"></i></div>
+        <a href="mailto:singhsweta20@gmail.com" class="contact-box">
+          <div class="c-icon gm"><i class="fa-solid fa-envelope"></i></div>
           <h3>Gmail</h3>
-          <p>Official Email Contact</p>
-          <span class="card-link">Compose Email <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="c-sub">Official Email Contact</span>
+          <span class="c-action">Compose Email <i class="fa-solid fa-arrow-right"></i></span>
         </a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer-bar">
     <p>&copy; 2026 Sweta Singh. Crafted with <i class="fa-solid fa-heart"></i> using HTML, CSS & JS.</p>
   </footer>
 
