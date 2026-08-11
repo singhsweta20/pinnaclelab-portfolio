@@ -1,90 +1,76 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Theme Switcher Persistence
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const icon = themeToggleBtn.querySelector('i');
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Initialize AOS Animations
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
 
-  const currentTheme = localStorage.getItem('portfolio-theme');
-  if (currentTheme === 'light') {
-    document.body.classList.replace('dark-theme', 'light-theme');
-    icon.classList.replace('fa-moon', 'fa-sun');
+  // 2. Interactive Typed Title in Hero
+  if (document.getElementById("typed-headline")) {
+    new Typed("#typed-headline", {
+      strings: [
+        "Interactive Web Apps",
+        "Modern Frontend Interfaces",
+        "Clean JavaScript Projects",
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true,
+    });
   }
 
-  themeToggleBtn.addEventListener('click', () => {
-    if (document.body.classList.contains('dark-theme')) {
-      document.body.classList.replace('dark-theme', 'light-theme');
-      icon.classList.replace('fa-moon', 'fa-sun');
-      localStorage.setItem('portfolio-theme', 'light');
-    } else {
-      document.body.classList.replace('light-theme', 'dark-theme');
-      icon.classList.replace('fa-sun', 'fa-moon');
-      localStorage.setItem('portfolio-theme', 'dark');
-    }
-  });
+  // 3. Project Filter Tabs Logic
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
 
-  // 2. Animated Skill Progress Bars on Scroll
-  const skillSection = document.getElementById('skills');
-  const progressFills = document.querySelectorAll('.progress-fill');
-  let animated = false;
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
 
-  window.addEventListener('scroll', () => {
-    if (!skillSection) return;
-    const sectionPos = skillSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight / 1.3;
+      const filter = btn.getAttribute("data-filter");
 
-    if (sectionPos < screenPos && !animated) {
-      progressFills.forEach(fill => {
-        const targetWidth = fill.getAttribute('data-progress');
-        fill.style.width = targetWidth;
-      });
-      animated = true;
-    }
-  });
-
-  // 3. Dynamic Interactive Project Filter
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterValue = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-          card.classList.remove('hide');
+      projectCards.forEach((card) => {
+        if (filter === "all" || card.getAttribute("data-category") === filter) {
+          card.style.display = "block";
         } else {
-          card.classList.add('hide');
+          card.style.display = "none";
         }
       });
     });
   });
 
-  // 4. Interactive Contact Form Validation
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
+  // 4. Certificate Lightbox Modal Logic
+  const modal = document.getElementById("certModal");
+  const modalImg = document.getElementById("modalImg");
+  const captionText = document.getElementById("modalCaption");
+  const closeModalBtn = document.querySelector(".close-modal");
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      formStatus.style.color = '#2dd4bf';
-      formStatus.textContent = 'Sending message...';
+  document.querySelectorAll(".open-modal-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const imgSrc = btn.getAttribute("data-img");
+      const title = btn.getAttribute("data-title");
 
-      setTimeout(() => {
-        formStatus.textContent = 'Message sent successfully! (Demo Mode)';
-        contactForm.reset();
-      }, 1200);
+      modal.style.display = "block";
+      modalImg.src = imgSrc;
+      captionText.innerHTML = title;
     });
-  }
+  });
 
-  // 5. Resume Download Action
-  const resumeBtn = document.getElementById('resume-btn');
-  if (resumeBtn) {
-    resumeBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('Resume download triggered! Attach your resume PDF link to this button.');
-    });
-  }
+  closeModalBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  // 5. Animate Skill Progress Bars on Scroll
+  const fills = document.querySelectorAll(".progress-fill");
+  fills.forEach((fill) => {
+    const targetWidth = fill.getAttribute("data-progress");
+    fill.style.width = targetWidth;
+  });
 });
