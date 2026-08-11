@@ -1,118 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Professional Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- FontAwesome Icons for GitHub, Theme & Nav -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Animated Glowing Backgrounds -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <!-- Navigation Bar -->
   <header>
-    <nav class="navbar">
-      <div class="logo">developer <span>.io</span></div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+    <a href="#" class="logo">
+      <i class="fa-solid fa-code"></i> Developer<span>.io</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about" class="active">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle-btn" id="themeToggle" title="Toggle Theme">
         <i class="fa-solid fa-moon"></i>
       </button>
-    </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- About Section -->
-    <section id="about" class="section">
-      <h2 class="section-title">About Me</h2>
-      <div class="glass-card about-card">
-        <h3>Hi, I'm Sweta Singh</h3>
-        <p>
-          Passionate Front-End Developer crafting modern, clean, and interactive web applications with dynamic UI layouts and responsive design standards.
-        </p>
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="hero-wrapper">
+      <div class="hero-text">
+        <div class="badge">
+          <span class="badge-dot"></span> Available for Hiring & Projects
+        </div>
+        <h1>Crafting <span class="gradient-text">Modern Web</span> Experiences</h1>
+        <div class="typewriter-text">&gt; Full-Stack Web Developer & Creative Coder_</div>
+        <p>I build scalable, highly performant, and visual-rich web applications with HTML5, CSS3, JavaScript, and modern frameworks.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">
+            Connect With Me <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#projects" class="btn-secondary">View Projects</a>
+        </div>
       </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <h2 class="section-title">Skills & Technologies</h2>
-      <div class="skills-grid">
-        <div class="skill-badge">HTML5</div>
-        <div class="skill-badge">CSS3</div>
-        <div class="skill-badge">JavaScript</div>
-        <div class="skill-badge">CSS Grid</div>
-        <div class="skill-badge">Flexbox</div>
-        <div class="skill-badge">Git & GitHub</div>
+      <!-- Live Code Visual Block -->
+      <div class="hero-code-box">
+        <div class="code-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="code-title">developer.js</span>
+        </div>
+        <div class="code-body">
+          <span class="keyword">const</span> <span class="property">developer</span> = {<br>
+          &nbsp;&nbsp;<span class="property">name</span>: <span class="string">'Your Name'</span>,<br>
+          &nbsp;&nbsp;<span class="property">skills</span>: [<span class="string">'HTML5'</span>, <span class="string">'CSS3'</span>, <span class="string">'JavaScript'</span>, <span class="string">'Git'</span>],<br>
+          &nbsp;&nbsp;<span class="property">status</span>: <span class="string">'Production Ready'</span><br>
+          };<br><br>
+          <span class="function">console</span>.log(<span class="string">'Welcome to my portfolio!'</span>);
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h1 class="main-heading">Portfolio Showcase</h1>
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-subtitle">Capabilities</span>
+      <h2>Technical Expertise</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fa-brands fa-html5 skill-icon"></i>
+        <h3>HTML5 & Semantics</h3>
+        <p>Clean, structured, and accessible markup optimized for SEO & performance.</p>
+        <div class="skill-progress"><div class="skill-bar" style="width: 95%;"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-brands fa-css3-alt skill-icon"></i>
+        <h3>CSS3 & Animations</h3>
+        <p>Flexbox, Grid, Glassmorphism, Responsive Design, and UI transitions.</p>
+        <div class="skill-progress"><div class="skill-bar" style="width: 90%;"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-brands fa-js skill-icon"></i>
+        <h3>Modern JavaScript</h3>
+        <p>ES6+, Async/Await, DOM manipulation, APIs, and interactive logic.</p>
+        <div class="skill-progress"><div class="skill-bar" style="width: 85%;"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-brands fa-github skill-icon"></i>
+        <h3>Git & GitHub</h3>
+        <p>Version control, branches, repositories, deployment, and hosting.</p>
+        <div class="skill-progress"><div class="skill-bar" style="width: 88%;"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-subtitle">Featured Work</span>
+      <h2>Portfolio Showcase</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-banner"><i class="fa-solid fa-laptop-code"></i></div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <h3>Personal Portfolio Website</h3>
+          <p>High-end portfolio featuring glassmorphism, dynamic theme switching, and direct messaging links.</p>
+          <a href="https://github.com/your-username" target="_blank" class="btn-link">
+            <i class="fa-brands fa-github"></i> Source Code
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-banner"><i class="fa-solid fa-bag-shopping"></i></div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS Grid</span>
+          </div>
+          <h3>E-Commerce Web Application</h3>
+          <p>Interactive shopping system with dynamic cart calculation and responsive design layout.</p>
+          <a href="https://github.com/your-username" target="_blank" class="btn-link">
+            <i class="fa-brands fa-github"></i> Source Code
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section (ACTIVE LINKS) -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-subtitle">Get In Touch</span>
+      <h2>Let's Work Together</h2>
+    </div>
+    <div class="contact-container">
       
-      <div class="projects-grid">
-        <!-- Project 1: Personal Portfolio -->
-        <div class="project-card">
-          <div class="card-banner">
-            <i class="fa-solid fa-laptop-code card-icon"></i>
-          </div>
-          <div class="card-body">
-            <div class="tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <h3>Personal Portfolio Website</h3>
-            <p>
-              High-end portfolio featuring glassmorphism, dynamic theme switching, and direct messaging links.
-            </p>
-            <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="code-link">
-              <i class="fa-brands fa-github"></i> Source Code
-            </a>
-          </div>
-        </div>
+      <!-- WhatsApp Active Link -->
+      <a href="https://wa.me/919876543210?text=Hello!%20I%20saw%20your%20portfolio%20and%20want%20to%20connect." target="_blank" class="contact-card whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p>Instant Direct Chat</p>
+        <span class="action-badge">Send Message <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
 
-        <!-- Project 2: Sundial Bakehouse (Replaced E-Commerce) -->
-        <div class="project-card">
-          <div class="card-banner">
-            <i class="fa-solid fa-bag-shopping card-icon"></i>
-          </div>
-          <div class="card-body">
-            <div class="tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">CSS Grid</span>
-            </div>
-            <h3>Sundial Bakehouse Website</h3>
-            <p>
-              Interactive bakery layout featuring dynamic navigation, tab switches, metadata, and JSON-LD structured data.
-            </p>
-            <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="code-link">
-              <i class="fa-brands fa-github"></i> Live Demo / Source
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- GitHub Active Link -->
+      <a href="https://github.com/your-username" target="_blank" class="contact-card github">
+        <i class="fa-brands fa-github"></i>
+        <h3>GitHub</h3>
+        <p>Explore Repositories</p>
+        <span class="action-badge">View Profile <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="glass-card contact-card">
-        <p>Interested in working together or have any questions? Send me a message!</p>
-        <a href="mailto:singhsweta20@gmail.com" class="contact-btn">
-          <i class="fa-solid fa-envelope"></i> Send Email
-        </a>
-      </div>
-    </section>
-  </main>
+      <!-- Gmail Active Link -->
+      <a href="mailto:yourname@gmail.com?subject=Portfolio%20Inquiry" class="contact-card gmail">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Gmail</h3>
+        <p>Official Email Contact</p>
+        <span class="action-badge">Compose Email <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2026 Sweta Singh. All rights reserved.</p>
+    <p>&copy; 2026 Developer Portfolio. Crafted with <span>&hearts;</span> using HTML, CSS & JS.</p>
   </footer>
 
   <script src="script.js"></script>
