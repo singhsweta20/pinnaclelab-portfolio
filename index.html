@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweta Singh | Front-End Web Developer</title>
+  
+  <!-- Modern Font & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <header>
+  <!-- Glowing Visual Background Elements -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
     <nav class="navbar">
-      <div class="logo">
-        <i class="fa-solid fa-code"></i> Developer <span>.io</span>
-      </div>
+      <a href="#about" class="logo">
+        <i class="fa-solid fa-code"></i> Developer<span>.io</span>
+      </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -27,41 +37,46 @@
     </nav>
   </header>
 
-  <main>
-    <!-- About Section -->
+  <main class="container">
+    <!-- Hero / About Section -->
     <section id="about" class="hero-section">
-      <div class="hero-content">
-        <div class="status-badge">
-          <span class="status-dot"></span> Available for Hiring & Projects
+      <div class="hero-left">
+        <div class="badge">
+          <span class="pulse-dot"></span> Available for Hiring & Projects
         </div>
-        <h1 class="hero-title">Crafting Modern<br>Web Experiences</h1>
+        <h1 class="hero-title">Crafting Modern <br><span class="accent-text">Web Experiences</span></h1>
         <p class="hero-subtitle">&gt; Full-Stack Web Developer & Creative Coder_</p>
-        <p class="hero-description">
+        <p class="hero-desc">
           I build scalable, highly performant, and visual-rich web applications with HTML5, CSS3, JavaScript, and modern frameworks.
         </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Connect With Me &rarr;</a>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Connect With Me <i class="fa-solid fa-arrow-right"></i></a>
           <a href="#projects" class="btn btn-secondary">View Projects</a>
         </div>
       </div>
-      
-      <!-- Code Snippet Card -->
-      <div class="code-card">
-        <div class="code-header">
-          <div class="window-dots">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
+
+      <!-- Live Code Window -->
+      <div class="hero-right">
+        <div class="code-window">
+          <div class="window-header">
+            <div class="dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="window-title">developer.js</span>
           </div>
-          <span class="code-filename">developer.js</span>
-        </div>
-        <pre class="code-body"><code><span class="keyword">const</span> <span class="variable">developer</span> = {
-  <span class="property">name</span>: <span class="string">'Your Name'</span>,
-  <span class="property">skills</span>: [<span class="string">'HTML5'</span>, <span class="string">'CSS3'</span>, <span class="string">'JavaScript'</span>, <span class="string">'Git'</span>],
-  <span class="property">status</span>: <span class="string">'Production Ready'</span>
+          <div class="window-body">
+            <pre><code><span class="kwd">const</span> <span class="var">developer</span> = {
+  <span class="prop">name</span>: <span class="str">'Sweta Singh'</span>,
+  <span class="prop">role</span>: <span class="str">'Front-End Developer'</span>,
+  <span class="prop">skills</span>: [<span class="str">'HTML5'</span>, <span class="str">'CSS3'</span>, <span class="str">'JavaScript'</span>, <span class="str">'Git'</span>],
+  <span class="prop">status</span>: <span class="str">'Production Ready'</span>
 };
 
-<span class="console">console</span>.<span class="method">log</span>(<span class="string">'Welcome to my portfolio!'</span>);</code></pre>
+<span class="console">console</span>.<span class="method">log</span>(<span class="str">'Welcome to my portfolio!'</span>);</code></pre>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -71,33 +86,34 @@
         <span class="section-tag">CAPABILITIES</span>
         <h2 class="section-title">Technical Expertise</h2>
       </div>
+
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
           <h3>HTML5 & Semantics</h3>
           <p>Clean, structured, and accessible markup optimized for SEO & performance.</p>
-          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+          <div class="skill-bar"><div class="fill" style="width: 92%;"></div></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
           <h3>CSS3 & Animations</h3>
-          <p>Flexbox, Grid, Glassmorphism, Responsive Design, and UI transitions.</p>
-          <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+          <p>Flexbox, CSS Grid, Glassmorphism, Responsive Design, and modern UI transitions.</p>
+          <div class="skill-bar"><div class="fill" style="width: 88%;"></div></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon"><i class="fa-brands fa-square-js"></i></div>
           <h3>Modern JavaScript</h3>
-          <p>ES6+, Async/Await, DOM manipulation, APIs, and interactive logic.</p>
-          <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+          <p>ES6+, Async/Await, DOM manipulation, APIs, and interactive client logic.</p>
+          <div class="skill-bar"><div class="fill" style="width: 82%;"></div></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
           <h3>Git & GitHub</h3>
-          <p>Version control, branches, repositories, deployment, and hosting.</p>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+          <p>Version control, branches, project workflow, continuous deployment, and hosting.</p>
+          <div class="skill-bar"><div class="fill" style="width: 80%;"></div></div>
         </div>
       </div>
     </section>
@@ -110,43 +126,40 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: Personal Portfolio -->
+        <!-- Project 1 -->
         <div class="project-card">
-          <div class="project-banner">
-            <i class="fa-solid fa-laptop-code banner-icon"></i>
+          <div class="card-banner">
+            <i class="fa-solid fa-laptop-code"></i>
           </div>
-          <div class="project-info">
-            <div class="tags">
+          <div class="card-content">
+            <div class="tag-group">
               <span class="tag">HTML5</span>
               <span class="tag">CSS3</span>
               <span class="tag">JavaScript</span>
             </div>
             <h3>Personal Portfolio Website</h3>
-            <p>
-              High-end portfolio featuring glassmorphism, dynamic theme switching, and direct messaging links.
-            </p>
-            <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="source-btn">
+            <p>High-end developer portfolio featuring glassmorphism layout, dynamic theme switching, and direct messaging links.</p>
+            <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="link-btn">
               <i class="fa-brands fa-github"></i> Source Code
             </a>
           </div>
         </div>
 
-        <!-- Project 2: Sundial Bakehouse (Replaced E-Commerce Web Application) -->
+        <!-- Project 2 (Sundial Bakehouse) -->
         <div class="project-card">
-          <div class="project-banner">
-            <i class="fa-solid fa-bag-shopping banner-icon"></i>
+          <div class="card-banner bakery-banner">
+            <i class="fa-solid fa-store"></i>
           </div>
-          <div class="project-info">
-            <div class="tags">
+          <div class="card-content">
+            <div class="tag-group">
               <span class="tag">JavaScript</span>
               <span class="tag">CSS Grid</span>
+              <span class="tag">JSON-LD</span>
             </div>
             <h3>Sundial Bakehouse Website</h3>
-            <p>
-              Interactive bakery layout featuring dynamic navigation, tab switches, metadata, and JSON-LD structured data.
-            </p>
-            <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="source-btn">
-              <i class="fa-brands fa-github"></i> Source Code
+            <p>Interactive bakery application featuring dynamic UI tabs, menu showcases, metadata, and structured data setup.</p>
+            <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="link-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo / Source
             </a>
           </div>
         </div>
@@ -161,35 +174,33 @@
       </div>
 
       <div class="contact-grid">
-        <!-- WhatsApp -->
-        <div class="contact-card">
-          <div class="contact-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+        <a href="https://wa.me/" target="_blank" class="contact-card">
+          <div class="contact-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
           <h3>WhatsApp</h3>
           <p>Instant Direct Chat</p>
-          <a href="https://wa.me/" target="_blank" class="action-link">Send Message &rarr;</a>
-        </div>
+          <span class="card-link">Send Message <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-        <!-- GitHub -->
-        <div class="contact-card highlighted">
-          <div class="contact-icon github"><i class="fa-brands fa-github"></i></div>
+        <a href="https://github.com/singhsweta20" target="_blank" class="contact-card active-card">
+          <div class="contact-icon gh"><i class="fa-brands fa-github"></i></div>
           <h3>GitHub</h3>
           <p>Explore Repositories</p>
-          <a href="https://github.com/singhsweta20" target="_blank" class="action-link">View Profile &rarr;</a>
-        </div>
+          <span class="card-link">View Profile <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-        <!-- Gmail -->
-        <div class="contact-card">
-          <div class="contact-icon gmail"><i class="fa-solid fa-envelope"></i></div>
+        <a href="mailto:singhsweta20@gmail.com" class="contact-card">
+          <div class="contact-icon gm"><i class="fa-solid fa-envelope"></i></div>
           <h3>Gmail</h3>
           <p>Official Email Contact</p>
-          <a href="mailto:singhsweta20@gmail.com" class="action-link">Compose Email &rarr;</a>
-        </div>
+          <span class="card-link">Compose Email <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Developer Portfolio. Crafted with &#9829; using HTML, CSS & JS.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Sweta Singh. Crafted with <i class="fa-solid fa-heart"></i> using HTML, CSS & JS.</p>
   </footer>
 
   <script src="script.js"></script>
