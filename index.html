@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sweta Singh | Front-End Web Developer</title>
+  <title>Sweta Singh | Web Developer Portfolio</title>
 
-  <!-- Premium Web Fonts & FontAwesome Icons -->
+  <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,27 +15,30 @@
 </head>
 <body class="dark-theme">
 
-  <!-- Ambient Light Orbs -->
+  <!-- Glow Background Spheres -->
   <div class="glow-orb orb-top"></div>
   <div class="glow-orb orb-bottom"></div>
 
-  <!-- Navbar -->
+  <!-- Header / Navigation -->
   <header class="header">
     <nav class="nav-container">
       <a href="#about" class="brand-logo">
-        <i class="fa-solid fa-terminal"></i> Developer<span class="dot">.io</span>
+        <i class="fa-solid fa-code"></i> Sweta<span class="dot">.dev</span>
       </a>
       
       <ul class="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
-      <button id="theme-toggle" class="theme-switch" aria-label="Toggle Theme">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+      <div class="nav-actions">
+        <a href="#" class="btn-sm btn-resume" id="resume-btn"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+        <button id="theme-toggle" class="theme-switch" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -45,31 +48,31 @@
       <div class="hero-text-content">
         <div class="status-pill">
           <span class="live-pulse"></span>
-          <span>Available for Hiring & Freelance</span>
+          <span>Web Development Intern Project</span>
         </div>
         
         <h1 class="hero-headline">
-          Crafting Modern <br>
-          <span class="gradient-text">Web Experiences</span>
+          Building Modern & <br>
+          <span class="gradient-text">Interactive Web Apps</span>
         </h1>
         
-        <p class="hero-subline">&gt; Full-Stack Developer & Creative Coder_</p>
+        <p class="hero-subline">&gt; Front-End Developer & UI Enthusiast_</p>
         
         <p class="hero-description">
-          I build scalable, highly performant, and visual-rich web applications with HTML5, CSS3, JavaScript, and modern web architectures.
+          Specializing in responsive web architecture, clean semantic code, modern JavaScript (ES6+), and glassmorphism design systems.
         </p>
 
         <div class="hero-btn-group">
-          <a href="#contact" class="btn btn-teal">
-            Connect With Me <i class="fa-solid fa-arrow-right-long"></i>
+          <a href="#projects" class="btn btn-teal">
+            Explore Work <i class="fa-solid fa-arrow-right-long"></i>
           </a>
-          <a href="#projects" class="btn btn-outline">
-            View Projects
+          <a href="#contact" class="btn btn-outline">
+            Contact Me
           </a>
         </div>
       </div>
 
-      <!-- IDE Code Card -->
+      <!-- Live Code Block -->
       <div class="ide-card">
         <div class="ide-header">
           <div class="ide-buttons">
@@ -80,14 +83,14 @@
           <span class="ide-filename"><i class="fa-brands fa-js"></i> developer.js</span>
         </div>
         <div class="ide-body">
-          <pre><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+          <pre><code><span class="c-keyword">const</span> <span class="c-var">intern</span> = {
   <span class="c-prop">name</span>: <span class="c-str">'Sweta Singh'</span>,
-  <span class="c-prop">role</span>: <span class="c-str">'Front-End Developer'</span>,
-  <span class="c-prop">skills</span>: [<span class="c-str">'HTML5'</span>, <span class="c-str">'CSS3'</span>, <span class="c-str">'JS'</span>, <span class="c-str">'Git'</span>],
-  <span class="c-prop">status</span>: <span class="c-str">'Production Ready'</span>
+  <span class="c-prop">role</span>: <span class="c-str">'Frontend Developer'</span>,
+  <span class="c-prop">focus</span>: [<span class="c-str">'UI/UX'</span>, <span class="c-str">'Clean Code'</span>, <span class="c-str">'APIs'</span>],
+  <span class="c-prop">status</span>: <span class="c-str">'Ready for Challenges'</span>
 };
 
-<span class="c-func">console</span>.<span class="c-method">log</span>(<span class="c-str">'Welcome to my portfolio!'</span>);</code></pre>
+<span class="c-func">console</span>.<span class="c-method">log</span>(<span class="c-str">'Portfolio Loaded Successfully!'</span>);</code></pre>
         </div>
       </div>
     </section>
@@ -96,36 +99,40 @@
     <section id="skills" class="section-container">
       <div class="section-heading">
         <span class="sub-title">CAPABILITIES</span>
-        <h2>Technical Expertise</h2>
+        <h2>Technical Stack</h2>
       </div>
 
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-icon-box"><i class="fa-brands fa-html5"></i></div>
-          <h3>HTML5 & Semantics</h3>
-          <p>Clean, structured, and accessible markup optimized for SEO & performance.</p>
-          <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+          <h3>HTML5 & Semantic Markup</h3>
+          <p>Accessible structures, SEO-friendly layout, and clean DOM hierarchy.</p>
+          <div class="progress-info"><span>Proficiency</span><span>90%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-progress="90%"></div></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon-box"><i class="fa-brands fa-css3-alt"></i></div>
-          <h3>CSS3 & Animations</h3>
-          <p>Flexbox, CSS Grid, Glassmorphism, Responsive Design, and modern UI transitions.</p>
-          <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+          <h3>CSS3 & Modern Styling</h3>
+          <p>Flexbox, Grid, CSS Variables, Glassmorphism, and Animations.</p>
+          <div class="progress-info"><span>Proficiency</span><span>85%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-progress="85%"></div></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon-box"><i class="fa-brands fa-square-js"></i></div>
-          <h3>Modern JavaScript</h3>
-          <p>ES6+, Async/Await, DOM manipulation, APIs, and interactive client logic.</p>
-          <div class="progress-track"><div class="progress-fill" style="width: 82%;"></div></div>
+          <h3>JavaScript (ES6+)</h3>
+          <p>DOM Manipulation, Async/Await, Fetch API, and Event Handling.</p>
+          <div class="progress-info"><span>Proficiency</span><span>80%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-progress="80%"></div></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon-box"><i class="fa-brands fa-github"></i></div>
-          <h3>Git & GitHub</h3>
-          <p>Version control, branches, project workflow, continuous deployment, and hosting.</p>
-          <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+          <h3>Git & Version Control</h3>
+          <p>Branching strategies, GitHub workflows, and site deployment.</p>
+          <div class="progress-info"><span>Proficiency</span><span>78%</span></div>
+          <div class="progress-track"><div class="progress-fill" data-progress="78%"></div></div>
         </div>
       </div>
     </section>
@@ -133,13 +140,19 @@
     <!-- Projects Section -->
     <section id="projects" class="section-container">
       <div class="section-heading">
-        <span class="sub-title">FEATURED WORK</span>
-        <h2>Portfolio Showcase</h2>
+        <span class="sub-title">PORTFOLIO</span>
+        <h2>Featured Projects</h2>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-wrapper">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="js">JavaScript</button>
       </div>
 
       <div class="projects-grid">
-        <!-- Card 1 -->
-        <div class="project-card">
+        <div class="project-card" data-category="frontend">
           <div class="card-image-banner p1-bg">
             <i class="fa-solid fa-laptop-code"></i>
           </div>
@@ -149,16 +162,20 @@
               <span class="tech-tag">CSS3</span>
               <span class="tech-tag">JavaScript</span>
             </div>
-            <h3>Personal Portfolio Website</h3>
-            <p>High-end developer portfolio featuring glassmorphism layout, dynamic theme switching, and responsive design.</p>
-            <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" rel="noopener noreferrer" class="code-btn">
-              <i class="fa-brands fa-github"></i> Source Code
-            </a>
+            <h3>Developer Portfolio Website</h3>
+            <p>Responsive personal portfolio featuring dynamic theme switching, glassmorphism UI, and interactive skill tracking.</p>
+            <div class="card-links">
+              <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank" class="code-btn">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a href="https://singhsweta20.github.io/pinnaclelab-portfolio/" target="_blank" class="code-btn demo-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="project-card">
+        <div class="project-card" data-category="js">
           <div class="card-image-banner p2-bg">
             <i class="fa-solid fa-store"></i>
           </div>
@@ -166,52 +183,78 @@
             <div class="tag-row">
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">CSS Grid</span>
-              <span class="tech-tag">JSON-LD</span>
+              <span class="tech-tag">DOM Manipulation</span>
             </div>
-            <h3>Sundial Bakehouse Website</h3>
-            <p>Interactive bakery application featuring dynamic UI tabs, menu showcases, metadata, and structured data setup.</p>
-            <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" rel="noopener noreferrer" class="code-btn">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo / Source
-            </a>
+            <h3>Sundial Bakehouse Application</h3>
+            <p>Interactive web app featuring dynamic menu filter tabs, custom modal views, and structured metadata setup.</p>
+            <div class="card-links">
+              <a href="https://github.com/singhsweta20/sundial-bakehouse" target="_blank" class="code-btn">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a href="https://singhsweta20.github.io/sundial-bakehouse/" target="_blank" class="code-btn demo-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact & Form Section -->
     <section id="contact" class="section-container">
       <div class="section-heading">
         <span class="sub-title">GET IN TOUCH</span>
-        <h2>Let's Work Together</h2>
+        <h2>Let's Connect</h2>
       </div>
 
-      <div class="contact-grid">
-        <a href="https://wa.me/" target="_blank" class="contact-box">
-          <div class="c-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
-          <h3>WhatsApp</h3>
-          <span class="c-sub">Instant Direct Chat</span>
-          <span class="c-action">Send Message <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
+      <div class="contact-wrapper">
+        <div class="contact-cards">
+          <a href="https://wa.me/" target="_blank" class="contact-box">
+            <div class="c-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="c-info">
+              <h3>WhatsApp</h3>
+              <p>Instant Messaging</p>
+            </div>
+          </a>
 
-        <a href="https://github.com/singhsweta20" target="_blank" class="contact-box highlight-box">
-          <div class="c-icon gh"><i class="fa-brands fa-github"></i></div>
-          <h3>GitHub</h3>
-          <span class="c-sub">Explore Repositories</span>
-          <span class="c-action">View Profile <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
+          <a href="https://github.com/singhsweta20" target="_blank" class="contact-box">
+            <div class="c-icon gh"><i class="fa-brands fa-github"></i></div>
+            <div class="c-info">
+              <h3>GitHub</h3>
+              <p>Explore Repositories</p>
+            </div>
+          </a>
 
-        <a href="mailto:singhsweta20@gmail.com" class="contact-box">
-          <div class="c-icon gm"><i class="fa-solid fa-envelope"></i></div>
-          <h3>Gmail</h3>
-          <span class="c-sub">Official Email Contact</span>
-          <span class="c-action">Compose Email <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
+          <a href="mailto:singhsweta20@gmail.com" class="contact-box">
+            <div class="c-icon gm"><i class="fa-solid fa-envelope"></i></div>
+            <div class="c-info">
+              <h3>Email</h3>
+              <p>singhsweta20@gmail.com</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Interactive Form -->
+        <form class="contact-form" id="contactForm">
+          <h3>Send a Message</h3>
+          <div class="input-group">
+            <input type="text" id="name" required placeholder="Your Name" />
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" required placeholder="Your Email" />
+          </div>
+          <div class="input-group">
+            <textarea id="message" rows="4" required placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-teal form-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          <div id="formStatus" class="form-status"></div>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="footer-bar">
-    <p>&copy; 2026 Sweta Singh. Crafted with <i class="fa-solid fa-heart"></i> using HTML, CSS & JS.</p>
+    <p>&copy; 2026 Sweta Singh. Portfolio Project for Web Development Internship.</p>
   </footer>
 
   <script src="script.js"></script>
