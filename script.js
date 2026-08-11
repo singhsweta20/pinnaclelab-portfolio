@@ -1,35 +1,17 @@
-// Theme Toggle Functionality
-const themeToggleBtn = document.getElementById('themeToggle');
-const themeIcon = themeToggleBtn.querySelector('i');
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const icon = themeToggleBtn.querySelector('i');
 
-themeToggleBtn.addEventListener('click', () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  if (currentTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    themeIcon.className = 'fa-solid fa-moon';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    themeIcon.className = 'fa-solid fa-sun';
-  }
-});
+  // Dark / Light Theme Toggle Functionality
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
 
-// Scroll Active Navigation Highlight
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav ul li a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 150) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
+    if (document.body.classList.contains('light-theme')) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
     }
   });
 });
