@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth alert on Contact Form submit
+  // Contact Form Submission
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Interactive Project Tabs
+  // Project Category Filter Tabs
   const tabBtns = document.querySelectorAll('.tab-btn');
   tabBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -18,12 +18,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Dark / Light Theme Toggle Placeholder
-  const themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      themeToggle.classList.toggle('fa-sun');
-      themeToggle.classList.toggle('fa-moon');
+  // Certificate Modal Logic
+  const certModal = document.getElementById('certModal');
+  const modalCertTitle = document.getElementById('modalCertTitle');
+  const modalCertImage = document.getElementById('modalCertImage');
+  const closeCertModal = document.getElementById('closeCertModal');
+  const certBtns = document.querySelectorAll('.cert-btn');
+
+  certBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const certTitle = btn.getAttribute('data-title');
+      const certImg = btn.getAttribute('data-img');
+
+      modalCertTitle.innerText = certTitle;
+      modalCertImage.src = certImg;
+      certModal.style.display = 'flex';
+    });
+  });
+
+  if (closeCertModal) {
+    closeCertModal.addEventListener('click', () => {
+      certModal.style.display = 'none';
     });
   }
+
+  window.addEventListener('click', (e) => {
+    if (e.target === certModal) {
+      certModal.style.display = 'none';
+    }
+  });
 });
