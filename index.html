@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sweta Singh | Frontend Developer</title>
+  <title>Sweta Singh | ECE Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -25,277 +23,260 @@
     </ul>
     <div class="nav-actions">
       <a href="#" class="btn-resume"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+      <i class="fa-solid fa-sun"></i>
       <i class="fa-solid fa-moon theme-toggle" id="themeToggle"></i>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section id="about" class="hero-section">
-    <div class="hero-content">
-      <span class="badge"><i class="fa-solid fa-circle"></i> Web Development Intern Project</span>
-      <h1>Building <span class="highlight">Modern & Scalable</span> Frontend Applications</h1>
-      <p class="subtitle">&gt; Frontend Developer &amp; UI Enthusiast_</p>
-      <p class="description">
-        Specializing in responsive web architecture, clean semantic code, modern JavaScript (ES6+), and glassmorphism design systems.
-      </p>
-      <div class="cta-buttons">
-        <a href="#projects" class="btn btn-primary">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-      </div>
-    </div>
+  <!-- DASHBOARD WRAPPER -->
+  <main class="dashboard-container">
+    
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+      
+      <!-- HERO / ABOUT -->
+      <section id="about" class="hero-card glass">
+        <span class="badge"><i class="fa-solid fa-circle"></i> Web Development Intern Project</span>
+        <h1>Building <span class="highlight">Modern &amp; Scalable</span> Frontend Applications</h1>
+        <p class="subtitle">&gt; Frontend Developer &amp; UI Enthusiast_</p>
+        <p class="description">
+          Specializing in responsive web architecture, clean semantic code, modern JavaScript (ES6+), and glassmorphism design systems.
+        </p>
+      </section>
 
-    <!-- CODE SNIPPET CARD -->
-    <div class="code-card glass">
-      <div class="window-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="file-name"><i class="fa-brands fa-js"></i> developer.js</span>
-      </div>
-      <pre><code><span class="keyword">const</span> intern = {
-  name: <span class="string">'Sweta Singh'</span>,
-  role: <span class="string">'Frontend Developer'</span>,
-  branch: <span class="string">'Electronics & Communication'</span>,
-  focus: [<span class="string">'UI/UX'</span>, <span class="string">'Clean Code'</span>, <span class="string">'APIs'</span>],
-  status: <span class="string">'Ready for Challenges'</span>
-};
+      <!-- TECHNICAL STACK -->
+      <section id="skills" class="section-card glass">
+        <p class="section-tag">CAPABILITIES</p>
+        <h2>Technical Stack</h2>
 
-<span class="console">console</span>.log(<span class="string">'Portfolio Loaded Successfully!'</span>);</code></pre>
-    </div>
-  </section>
+        <div class="skills-grid">
+          <div class="skill-item glass-inner">
+            <i class="fa-brands fa-html5 skill-icon"></i>
+            <h3>HTML5 &amp; Semantic Markup</h3>
+            <p>Accessible structures, SEO-friendly layout, and clean DOM hierarchy.</p>
+            <div class="prof-label"><span>Proficiency</span><span>90%</span></div>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+          </div>
 
-  <!-- SKILLS & GITHUB STATS -->
-  <section id="skills" class="section">
-    <p class="section-tag">CAPABILITIES</p>
-    <h2>Technical Stack</h2>
+          <div class="skill-item glass-inner">
+            <i class="fa-brands fa-css3-alt skill-icon"></i>
+            <h3>CSS3 &amp; Modern Styling</h3>
+            <p>Flexbox, Grid, CSS Variables, Glassmorphism, and Animations.</p>
+            <div class="prof-label"><span>Proficiency</span><span>85%</span></div>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+          </div>
 
-    <div class="skills-grid">
-      <div class="card glass">
-        <i class="fa-brands fa-html5 skill-icon"></i>
-        <h3>HTML5 &amp; Semantic Markup</h3>
-        <p>Accessible structures, SEO-friendly layout, and clean DOM hierarchy.</p>
-        <div class="proficiency-container">
-          <div class="prof-label"><span>Proficiency</span><span>90%</span></div>
-          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-        </div>
-      </div>
+          <div class="skill-item glass-inner">
+            <i class="fa-brands fa-js skill-icon"></i>
+            <h3>JavaScript (ES6+)</h3>
+            <p>DOM Manipulation, Async/Await, Fetch API, and Event Handling.</p>
+            <div class="prof-label"><span>Proficiency</span><span>80%</span></div>
+            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+          </div>
 
-      <div class="card glass">
-        <i class="fa-brands fa-css3-alt skill-icon"></i>
-        <h3>CSS3 &amp; Modern Styling</h3>
-        <p>Flexbox, Grid, CSS Variables, Glassmorphism, and Animations.</p>
-        <div class="proficiency-container">
-          <div class="prof-label"><span>Proficiency</span><span>85%</span></div>
-          <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-        </div>
-      </div>
-
-      <div class="card glass">
-        <i class="fa-brands fa-js skill-icon"></i>
-        <h3>JavaScript (ES6+)</h3>
-        <p>DOM Manipulation, Async/Await, Fetch API, and Event Handling.</p>
-        <div class="proficiency-container">
-          <div class="prof-label"><span>Proficiency</span><span>80%</span></div>
-          <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-        </div>
-      </div>
-
-      <div class="card glass">
-        <i class="fa-brands fa-github skill-icon"></i>
-        <h3>Git &amp; Version Control</h3>
-        <p>Branching strategies, GitHub workflows, and site deployment.</p>
-        <div class="proficiency-container">
-          <div class="prof-label"><span>Proficiency</span><span>78%</span></div>
-          <div class="progress-bar"><div class="progress" style="width: 78%;"></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- GITHUB STATS WIDGET -->
-    <div class="github-stats-container glass">
-      <h3><i class="fa-brands fa-github"></i> Sweta's GitHub Stats</h3>
-      <div class="stats-row">
-        <div class="stat-box">
-          <h4>86</h4>
-          <p>Total Contributions</p>
-          <small>Jul 21 - Present</small>
-        </div>
-        <div class="stat-box circle-box">
-          <div class="circle-val">3</div>
-          <p>Current Streak</p>
-          <small>Aug 10 - Aug 12</small>
-        </div>
-        <div class="stat-box">
-          <h4>3</h4>
-          <p>Longest Streak</p>
-          <small>Jul 24 - Jul 26</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECTS -->
-  <section id="projects" class="section">
-    <p class="section-tag">PORTFOLIO</p>
-    <h2>Featured Projects</h2>
-
-    <div class="project-tabs">
-      <button class="tab-btn active">All</button>
-      <button class="tab-btn">Frontend</button>
-      <button class="tab-btn">JavaScript</button>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project-card glass">
-        <div class="project-img-placeholder dev-portfolio-bg">
-          <i class="fa-solid fa-laptop-code"></i>
-        </div>
-        <div class="project-details">
-          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-          <h3>Developer Portfolio Website</h3>
-          <p>Responsive personal portfolio featuring dynamic theme switching, glassmorphism UI, and interactive skill tracking.</p>
-          <div class="project-links">
-            <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
-            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          <div class="skill-item glass-inner">
+            <i class="fa-brands fa-github skill-icon"></i>
+            <h3>Git &amp; Version Control</h3>
+            <p>Branching strategies, GitHub workflows, and site deployment.</p>
+            <div class="prof-label"><span>Proficiency</span><span>78%</span></div>
+            <div class="progress-bar"><div class="progress" style="width: 78%;"></div></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="project-card glass">
-        <div class="project-img-placeholder bakehouse-bg">
-          <i class="fa-solid fa-store"></i>
-        </div>
-        <div class="project-details">
-          <div class="tags"><span>JavaScript</span><span>CSS Grid</span><span>DOM</span></div>
-          <h3>Sundial Bakehouse Application</h3>
-          <p>Interactive web app featuring dynamic menu filter tabs, custom modal views, and structured metadata setup.</p>
-          <div class="project-links">
-            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
-            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card glass">
-        <div class="project-img-placeholder todo-bg">
-          <i class="fa-solid fa-list-check"></i>
-        </div>
-        <div class="project-details">
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <h3>To-Do List Web Application</h3>
-          <p>A lightweight productivity web app built with vanilla JavaScript to seamlessly create, manage, and delete daily tasks.</p>
-          <div class="project-links">
-            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
-            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATES & WORKSHOPS -->
-  <section id="certificates" class="section">
-    <p class="section-tag">ACHIEVEMENTS</p>
-    <h2>Certificates &amp; Workshops</h2>
-
-    <div class="cert-grid">
-      <div class="cert-card glass">
-        <i class="fa-solid fa-brain cert-icon"></i>
-        <p class="org-name">BANASTHALI VIDYAPITH</p>
-        <h3>India AI Impact Pre-Summit 2026</h3>
-        <p>Participated in "Women in AI: Shaping Digital India" organized by Centre for Artificial Intelligence, Banasthali Vidyapith.</p>
-        <div class="cert-footer">
-          <span><i class="fa-regular fa-calendar"></i> Feb 7-8, 2026</span>
-          <a href="#" class="view-link">View Certificate <i class="fa-solid fa-up-right-from-square"></i></a>
-        </div>
-      </div>
-
-      <div class="cert-card glass">
-        <i class="fa-solid fa-code cert-icon"></i>
-        <p class="org-name">APPWARS TECHNOLOGIES</p>
-        <h3>1-Day Workshop on "Code to AI"</h3>
-        <p>Successfully completed technical workshop held at Innovocation Student Club, Banasthali Vidyapith.</p>
-        <div class="cert-footer">
-          <span><i class="fa-regular fa-calendar"></i> Feb 09, 2026</span>
-          <a href="#" class="view-link">View Certificate <i class="fa-solid fa-up-right-from-square"></i></a>
-        </div>
-      </div>
-
-      <div class="cert-card glass">
-        <i class="fa-solid fa-award cert-icon"></i>
-        <p class="org-name">MINISTRY OF YOUTH AFFAIRS &amp; SPORTS</p>
-        <h3>Nasha Mukt Yuva for Viksit Bharat</h3>
-        <p>Certificate of Recognition by MY Bharat for social pledge and initiative participation.</p>
-        <div class="cert-footer">
-          <span><i class="fa-regular fa-calendar"></i> 2026</span>
-          <a href="#" class="view-link">View Certificate <i class="fa-solid fa-up-right-from-square"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION TIMELINE (ECE FIXED HERE) -->
-  <section id="education" class="section">
-    <p class="section-tag">BACKGROUND</p>
-    <h2>Education Timeline</h2>
-
-    <div class="timeline-container glass">
-      <div class="timeline-item">
-        <span class="status-tag">Pursuing</span>
-        <h3>Bachelor of Technology / Electronics &amp; Communication Engineering</h3>
-        <p class="institution">Banasthali Vidyapith, Rajasthan</p>
-        <p class="edu-desc">Combining Core Electronics with Web Development, Data Structures, Algorithms, and Software Engineering principles.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="section">
-    <p class="section-tag">GET IN TOUCH</p>
-    <h2>Let's Connect</h2>
-
-    <div class="contact-grid">
-      <div class="contact-info">
-        <a href="https://wa.me/" target="_blank" class="info-card glass">
-          <i class="fa-brands fa-whatsapp"></i>
-          <div>
-            <h4>WhatsApp</h4>
-            <p>Instant Messaging</p>
-          </div>
-        </a>
-
-        <a href="https://github.com/singhsweta20" target="_blank" class="info-card glass">
+      <!-- GITHUB STATS CHART -->
+      <section class="section-card glass">
+        <div class="github-header">
+          <h3>GitHub Stats</h3>
           <i class="fa-brands fa-github"></i>
-          <div>
-            <h4>GitHub</h4>
-            <p>Explore Repositories</p>
+        </div>
+        <div class="stats-content">
+          <div class="donut-chart-container">
+            <div class="donut-chart"></div>
           </div>
-        </a>
+          <div class="stats-legend">
+            <p class="legend-title">Top languages</p>
+            <ul>
+              <li><span class="dot-color js"></span> JS</li>
+              <li><span class="dot-color css"></span> CSS</li>
+              <li><span class="dot-color html"></span> HTML</li>
+            </ul>
+            <div class="metrics-row">
+              <div>
+                <h4>86</h4>
+                <p>Contributions</p>
+              </div>
+              <div>
+                <h4>33</h4>
+                <p>Metrics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a href="mailto:singhsweta20@gmail.com" class="info-card glass">
-          <i class="fa-regular fa-envelope"></i>
-          <div>
-            <h4>Email</h4>
-            <p>singhsweta20@gmail.com</p>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+      
+      <!-- FEATURED PROJECTS -->
+      <section id="projects" class="section-card glass">
+        <p class="section-tag">PORTFOLIO</p>
+        <h2>Featured Projects</h2>
+
+        <div class="project-tabs">
+          <button class="tab-btn active">All</button>
+          <button class="tab-btn">Frontend</button>
+          <button class="tab-btn">JavaScript</button>
+        </div>
+
+        <div class="projects-grid">
+          
+          <div class="project-card glass-inner">
+            <div class="project-img-box">
+              <img src="project1.jpg" alt="Developer Portfolio" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60'" />
+            </div>
+            <div class="project-details">
+              <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+              <h3>Developer Portfolio Website</h3>
+              <p>Responsive personal portfolio featuring dynamic theme switching and glassmorphism UI.</p>
+              <div class="project-links">
+                <a href="https://github.com/singhsweta20/pinnaclelab-portfolio" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
           </div>
-        </a>
+
+          <div class="project-card glass-inner">
+            <div class="project-img-box">
+              <img src="project2.jpg" alt="Sundial Bakehouse" onerror="this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=60'" />
+            </div>
+            <div class="project-details">
+              <div class="tags"><span>JavaScript</span><span>CSS Grid</span></div>
+              <h3>Sundial Bakehouse Application</h3>
+              <p>Interactive web app featuring dynamic menu filter tabs and custom modal views.</p>
+              <div class="project-links">
+                <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card glass-inner">
+            <div class="project-img-box">
+              <img src="project3.jpg" alt="To-Do List App" onerror="this.src='https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&auto=format&fit=crop&q=60'" />
+            </div>
+            <div class="project-details">
+              <div class="tags"><span>HTML</span><span>JavaScript</span></div>
+              <h3>To-Do List Web Application</h3>
+              <p>Lightweight productivity app to create, manage, and delete daily tasks.</p>
+              <div class="project-links">
+                <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CERTIFICATES WITH PHOTO PREVIEW -->
+      <section id="certificates" class="section-card glass">
+        <p class="section-tag">ACHIEVEMENTS</p>
+        <h2>Certificates &amp; Workshops</h2>
+
+        <div class="cert-grid">
+          <div class="cert-card glass-inner">
+            <div class="cert-header">
+              <i class="fa-solid fa-brain cert-icon"></i>
+              <p class="org-name">BANASTHALI VIDYAPITH</p>
+            </div>
+            <h3>India AI Impact Pre-Summit 2026</h3>
+            <p>Participated in "Women in AI: Shaping Digital India" organized by Centre for Artificial Intelligence.</p>
+            <div class="cert-footer">
+              <span>Feb 7-8, 2026</span>
+              <a href="#" class="view-link cert-btn" data-title="India AI Impact Pre-Summit 2026" data-img="cert1.jpg">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <div class="cert-card glass-inner">
+            <div class="cert-header">
+              <i class="fa-solid fa-code cert-icon"></i>
+              <p class="org-name">APPWARS TECHNOLOGIES</p>
+            </div>
+            <h3>1-Day Workshop on "Code to AI"</h3>
+            <p>Completed technical workshop held at Innovocation Student Club, Banasthali Vidyapith.</p>
+            <div class="cert-footer">
+              <span>Feb 09, 2026</span>
+              <a href="#" class="view-link cert-btn" data-title="Code to AI Workshop" data-img="cert2.jpg">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <div class="cert-card glass-inner">
+            <div class="cert-header">
+              <i class="fa-solid fa-award cert-icon"></i>
+              <p class="org-name">MINISTRY OF YOUTH AFFAIRS &amp; SPORTS</p>
+            </div>
+            <h3>Nasha Mukt Yuva for Viksit Bharat</h3>
+            <p>Certificate of Recognition by MY Bharat for social pledge and initiative participation.</p>
+            <div class="cert-footer">
+              <span>2026</span>
+              <a href="#" class="view-link cert-btn" data-title="Nasha Mukt Yuva Certificate" data-img="cert3.jpg">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION & CONTACT -->
+      <div class="edu-contact-grid">
+        
+        <section id="education" class="section-card glass">
+          <p class="section-tag">EDUCATION</p>
+          <h2>Education Timeline</h2>
+          <div class="education-box glass-inner">
+            <span class="status-tag">Pursuing</span>
+            <h3>Bachelor of Technology / Electronics &amp; Communication Engineering</h3>
+            <p class="edu-desc">Combining Electronics and Web Development with focus on Data Structures and Algorithms for Embedded Systems.</p>
+          </div>
+          <div class="inst-info">
+            <p><i class="fa-solid fa-building-columns"></i> <strong>Banasthali Vidyapith</strong></p>
+            <p><i class="fa-regular fa-envelope"></i> singhsweta20@gmail.com</p>
+          </div>
+        </section>
+
+        <section id="contact" class="section-card glass">
+          <form class="contact-form" id="contactForm">
+            <h3>Send a Message</h3>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="3" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </section>
+
       </div>
 
-      <form class="contact-form glass" id="contactForm">
-        <h3>Send a Message</h3>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn btn-primary btn-block">
-          Send Message <i class="fa-solid fa-paper-plane"></i>
-        </button>
-      </form>
     </div>
-  </section>
+
+  </main>
 
   <footer>
-    <p>© 2026 Sweta Singh. Portfolio Project for Web Development Internship.</p>
+    <p>© 2026 Sweta Singh. Finalist Portfolio for Web Development Internship.</p>
   </footer>
+
+  <!-- CERTIFICATE POPUP MODAL -->
+  <div id="certModal" class="modal">
+    <div class="modal-content glass">
+      <span class="close-modal" id="closeCertModal">&times;</span>
+      <h3 id="modalCertTitle">Certificate Preview</h3>
+      <div class="modal-body">
+        <img id="modalCertImage" src="" alt="Certificate Image" onerror="this.src='https://via.placeholder.com/600x400?text=Certificate+Image+Not+Found'" />
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
