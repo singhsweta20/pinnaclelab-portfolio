@@ -12,7 +12,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen pb-12 antialiased bg-slate-950 text-slate-100">
+<body class="min-h-screen pb-12 antialiased bg-slate-950 text-slate-100 selection:bg-cyan-500/30">
 
     <!-- Header Navigation -->
     <nav class="sticky top-0 z-40 glass-card px-6 py-4 mb-8 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md">
@@ -26,7 +26,7 @@
                 <a href="#education" class="hover:text-cyan-400 transition">Education</a>
             </div>
             <a href="#" class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-950 font-semibold rounded-lg text-sm shadow-lg">
-                <i class="fa-solid fa-file-arrow-down"></i> Resume
+                <i class="fa-solid fa-file-arrow-down mr-1"></i> Resume
             </a>
         </div>
     </nav>
@@ -170,58 +170,66 @@
             </div>
         </section>
 
-        <!-- Certificates Section (Configured with cert-btn and data attributes for script.js) -->
+        <!-- Certificates Section (Updated Structure for click event) -->
         <section id="certificates">
             <h2 class="text-xl font-bold text-slate-400 mb-6 uppercase tracking-wider flex items-center gap-2">
                 <i class="fa-solid fa-certificate text-cyan-400"></i> Certificates
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 
+                <!-- Certificate 1 -->
                 <div class="glass-card p-5 rounded-xl border border-slate-800 bg-slate-900/50 flex flex-col justify-between">
                     <div>
                         <p class="text-[11px] text-cyan-400 font-semibold uppercase tracking-wide">Banasthali Vidyapith</p>
                         <h4 class="text-sm font-bold text-white mt-1 mb-2">India AI Impact Pre-Summit 2026</h4>
-                        <p class="text-slate-400 text-xs mb-4">Participated in 'Women in AI: Shaping Digital India'.</p>
+                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">Participated in 'Women in AI: Shaping Digital India'.</p>
                     </div>
+                    <!-- Added cert-btn class and data attributes -->
                     <button class="cert-btn w-full py-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 rounded-lg text-xs font-semibold transition"
-                        data-title="India AI Impact Pre-Summit 2026" 
-                        data-img="cert1.jpg">
-                        <i class="fa-regular fa-image mr-1"></i> View Certificate
+                            data-title="India AI Impact Pre-Summit Certificate"
+                            data-img="cert1.jpg">
+                        View Certificate
                     </button>
                 </div>
 
+                <!-- Certificate 2 -->
                 <div class="glass-card p-5 rounded-xl border border-slate-800 bg-slate-900/50 flex flex-col justify-between">
                     <div>
                         <p class="text-[11px] text-cyan-400 font-semibold uppercase tracking-wide">AppWars Technologies</p>
                         <h4 class="text-sm font-bold text-white mt-1 mb-2">Workshop on 'Code to AI'</h4>
-                        <p class="text-slate-400 text-xs mb-4">Completed technical workshop held at Banasthali Vidyapith.</p>
+                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">Completed practical technical training on AI integration and development.</p>
                     </div>
+                    <!-- Added cert-btn class and data attributes -->
                     <button class="cert-btn w-full py-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 rounded-lg text-xs font-semibold transition"
-                        data-title="Workshop on 'Code to AI'" 
-                        data-img="cert2.jpg">
-                        <i class="fa-regular fa-image mr-1"></i> View Certificate
+                            data-title="Workshop on 'Code to AI' Certificate"
+                            data-img="cert2.jpg">
+                        View Certificate
                     </button>
                 </div>
 
+                <!-- Certificate 3 -->
                 <div class="glass-card p-5 rounded-xl border border-slate-800 bg-slate-900/50 flex flex-col justify-between">
                     <div>
                         <p class="text-[11px] text-cyan-400 font-semibold uppercase tracking-wide">MY Bharat</p>
                         <h4 class="text-sm font-bold text-white mt-1 mb-2">Nasha Mukt Yuva for Viksit Bharat</h4>
-                        <p class="text-slate-400 text-xs mb-4">Certificate of Recognition for social initiative participation.</p>
+                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">Certificate of Recognition by Ministry of Youth Affairs for social initiative pledges.</p>
                     </div>
+                    <!-- Added cert-btn class and data attributes -->
                     <button class="cert-btn w-full py-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 rounded-lg text-xs font-semibold transition"
-                        data-title="Nasha Mukt Yuva Certificate" 
-                        data-img="cert3.jpg">
-                        <i class="fa-regular fa-image mr-1"></i> View Certificate
+                            data-title="MY Bharat Pledge Certificate"
+                            data-img="cert3.jpg">
+                        View Certificate
                     </button>
                 </div>
 
             </div>
         </section>
 
-        <!-- Education & Contact Section -->
+        <!-- Education & Contact Split -->
         <section id="education" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card p-6 rounded-xl border border-slate-800 bg-slate-900/50 flex flex-col justify-between">
+            
+            <!-- Education Timeline -->
+            <div class="glass-card p-6 rounded-xl flex flex-col justify-between border border-slate-800 bg-slate-900/50">
                 <div>
                     <h2 class="text-xl font-bold text-slate-400 mb-6 uppercase tracking-wider flex items-center gap-2">
                         <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Education Timeline
@@ -230,16 +238,16 @@
                         <h3 class="text-lg font-semibold text-white">Banasthali Vidyapith</h3>
                         <span class="badge px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400">2022 – 2026</span>
                     </div>
-                    <p class="text-cyan-400 text-sm font-medium mb-2">Bachelor of Technology – Electronics and Communication Engineering</p>
+                    <p class="text-cyan-400 text-sm font-medium mb-2">Bachelor of Technology – ECE</p>
                     <p class="text-slate-400 text-xs leading-relaxed">
-                        Focusing on embedded systems algorithms, hardware-software interfacing, and modern web application development.
+                        Focusing on embedded systems algorithms, hardware-software interfacing, and modern web dashboards.
                     </p>
                 </div>
                 <p class="text-slate-500 text-xs pt-4 border-t border-slate-800 mt-4">singhsweta20@gmail.com</p>
             </div>
 
+            <!-- Contact Form (Added ID to Form) -->
             <div class="glass-card p-6 rounded-xl border border-slate-800 bg-slate-900/50">
-                <!-- Form given ID contactForm to match script.js -->
                 <form id="contactForm" class="space-y-4">
                     <div>
                         <label class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
@@ -262,14 +270,17 @@
 
     </main>
 
-    <!-- Certificate Popup Modal (Matches script.js IDs: certModal, closeCertModal, modalCertTitle, modalCertImage) -->
+    <!-- Certificate Modal Structure (Crucial for JS click events) -->
     <div id="certModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
         <div class="glass-card w-full max-w-lg p-6 rounded-2xl border border-slate-700 bg-slate-900 relative">
+            <!-- Close Modal Button -->
             <button id="closeCertModal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <h3 id="modalCertTitle" class="text-lg font-bold text-white mb-4">Certificate</h3>
-            <div class="overflow-hidden rounded-lg border border-slate-800">
+            
+            <!-- Injected Content Areas -->
+            <h3 id="modalCertTitle" class="text-xl font-bold text-white mb-4">Certificate</h3>
+            <div class="rounded-lg overflow-hidden border border-slate-800">
                 <img id="modalCertImage" src="" alt="Certificate" class="w-full h-auto object-contain max-h-[70vh]">
             </div>
         </div>
@@ -277,9 +288,10 @@
 
     <!-- Footer -->
     <footer class="text-center text-xs text-slate-500 mt-12 py-6 border-t border-slate-800">
-        © 2026 Sweta Singh. Candidate Portfolio for Web Development Internship Application.
+        © 2026 Sweta Singh. Finalist Portfolio optimized for Web Development Internship Applications.
     </footer>
 
+    <!-- Place JS script at the END of body -->
     <script src="script.js"></script>
 </body>
 </html>
